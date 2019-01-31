@@ -12,17 +12,57 @@ html {
 body {
 	margin: 0;
 	min-height: 100%;
+	text-align: center;
 }
 
 /* Bio Section */
 
 .bio {
-	background-image: public/images/space.png;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	background-image: url(/images/space.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.bio img {
+	margin: 3rem;
+	border-radius: 5%;
+}
+
+.textbox {
+	border: solid;
+	margin: 5rem 1rem;
+	background-color: gray;
+	width: 55%;
+	height: 40%;
 }
 
 /* Bottom Nav */
 
-/* Bio Section */
+nav img {
+}
+
+nav {
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
+
+nav li {
+}
+
+nav a {
+}
+
+nav a:hover {
+}
+
+/* Main */
 
 /* About Section */
 
