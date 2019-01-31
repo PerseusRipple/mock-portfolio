@@ -1,3 +1,5 @@
+/* Universal Styles */
+
 :root {
 	font: 16px / 1 sans-serif;
 	font-family: 'Roboto', sans-serif;
@@ -11,3 +13,19 @@ body {
 	margin: 0;
 	min-height: 100%;
 }
+
+/* Bio Section */
+
+.bio {
+	background-image: public/images/space.png;
+}
+
+/* Bottom Nav */
+
+/* Bio Section */
+
+/* About Section */
+
+/* Connect Section */
+
+/* Footer */
