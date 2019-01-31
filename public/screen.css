@@ -51,6 +51,7 @@ nav ul {
 	list-style: none;
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 nav li {
@@ -64,7 +65,20 @@ nav a:hover {
 
 /* Main */
 
+main {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
 /* About Section */
+
+.about {
+}
+
+.img-holder {
+	background-image: url(/images/react.png);
+}
 
 /* Connect Section */
 
