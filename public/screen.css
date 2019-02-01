@@ -33,6 +33,7 @@ body {
 
 .textbox {
 	border: solid;
+	border-radius: 10%;
 	margin: 5rem 1rem;
 	background-color: gray;
 	width: 55%;
@@ -74,12 +75,65 @@ main {
 /* About Section */
 
 .about {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
-.img-holder {
-	background-image: url(/images/react.png);
+.react-holder {
+	background-image: url('/images/react.png');
+	background-size: 100%;
+	height: 3rem;
+}
+
+.intro {
+}
+
+.react {
+	border: 1px solid black;
+	border-radius: 5%;
+	background-color: whitesmoke;
+}
+
+.fizz-holder {
+	background-image: url('/images/code.png');
+	background-size: 100%;
+	height: 3rem;
+}
+
+.react p {
+	font-size: 0.75rem;
+}
+
+.fizz {
+	border: 1px solid black;
+	border-radius: 5%;
+	background-color: whitesmoke;
+}
+
+.fizz p {
+	font-size: 0.75rem;
+}
+
+.date {
+	font-size: 0.75rem;
 }
 
 /* Connect Section */
 
+.connect {
+	border: 1px solid black;
+}
+
 /* Footer */
+
+footer {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+footer p {
+	border: 1px solid black;
+	align-content: center;
+}
