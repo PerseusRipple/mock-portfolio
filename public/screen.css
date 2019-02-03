@@ -15,11 +15,17 @@ body {
 	text-align: center;
 }
 
-/* Main Section */
+/* Header */
+
+header {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
 
 .bio {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 	background-image: url(/images/space.png);
 	background-size: 100% 100%;
@@ -41,7 +47,9 @@ body {
 	margin: 0.5rem;
 	background-color: gray;
 	opacity: 0.9;
-	height: 55%;
+	height: 8%;
+	width: 95%;
+	padding: 0.5rem;
 }
 
 .title {
@@ -56,33 +64,32 @@ body {
 
 ul.games {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	flex-wrap: wrap;
+	align-items: center;
 	list-style: none;
 	background-color: rgba(18, 18, 31, 0.75);
 	margin: 1rem;
+	padding: 0.77rem;
 }
 
-ul.games li {
+ul.games li img:hover {
+	backface-visibility: hidden;
+	animation: left;
 }
 
-nav a {
-}
+/* Supporting Section */
 
-nav a:hover {
-	color: ;
-}
-
-/* Main Container */
-
-.border {
+.supporting-section {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 #react-holder {
 	background-image: url('/images/react.png');
 	background-size: 100%;
 	background-position-y: 50%;
-	border-top-left-radius: 5%;
 	height: 3rem;
 }
 
@@ -90,45 +97,44 @@ nav a:hover {
 	border: 2rem solid rgb(14, 14, 39);
 	background-color: whitesmoke;
 	width: 100%;
-	margin: 0;
 }
+
+.greek {
+	position: relative;
+	font-size: 0.77rem;
+	padding: 1rem;
+	text-align: left;
+}
+
 .button {
-	background-color: rgb(60, 115, 233);
+	position: absolute;
+	background-size: 60vw;
+	background-color: rgb(37, 109, 175);
 	border: 0;
-	border-radius: 5%;
+	border-radius: 10%;
 	color: whitesmoke;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
-	float: right;
-	position: 60vw;
-	margin-right: 0.75rem;
-	padding: 0.33rem;
+	padding: 0.5rem;
+	margin-right: 1rem;
 }
-.supporting {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-}
+
 #fizz-holder {
 	background-image: url('/images/code.png');
 	background-size: 100%;
 	height: 3rem;
 }
-.react p {
-	font-size: 0.7rem;
-}
+
 .fizz {
 	border: 2rem solid rgb(14, 14, 39);
 	background-color: whitesmoke;
 	width: 100%;
-	margin: 0;
 }
-.fizz p {
-	font-size: 0.7rem;
-}
+
 .date {
 	font-size: 0.7rem;
 }
+
 /* Connect Section */
 
 .connect {
@@ -144,14 +150,15 @@ nav a:hover {
 	color: whitesmoke;
 }
 
-.social media {
+.social-media {
 	display: flex;
-	justify-content: flex-start;
-	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	list-style: none;
 }
 
 .twitter {
-	background-position-x: 4rem;
 }
 
 /* Footer */
@@ -170,6 +177,6 @@ footer p {
 	visibility: hidden;
 }
 
-.icon-logo {
+.truncated-logo {
 	font-size: 2rem;
 }
