@@ -24,7 +24,7 @@ body {
 	background-image: url(/images/space.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-
+	width: 100%;
 	padding: 3rem;
 }
 
@@ -75,19 +75,22 @@ nav a:hover {
 
 /* Main Container */
 
-.react-holder {
+.border {
+}
+
+#react-holder {
 	background-image: url('/images/react.png');
 	background-size: 100%;
-	height: 3rem;
 	background-position-y: 50%;
+	border-top-left-radius: 5%;
+	height: 3rem;
 }
 
 .react {
 	border: 2rem solid rgb(14, 14, 39);
-
 	background-color: whitesmoke;
 	width: 100%;
-	margin: 1rem;
+	margin: 0;
 }
 .button {
 	background-color: rgb(60, 115, 233);
@@ -106,7 +109,7 @@ nav a:hover {
 	justify-content: center;
 	flex-wrap: wrap;
 }
-.fizz-holder {
+#fizz-holder {
 	background-image: url('/images/code.png');
 	background-size: 100%;
 	height: 3rem;
@@ -115,11 +118,10 @@ nav a:hover {
 	font-size: 0.7rem;
 }
 .fizz {
-	border: 1px solid transparent;
-	border-radius: 5%;
+	border: 2rem solid rgb(14, 14, 39);
 	background-color: whitesmoke;
 	width: 100%;
-	margin: 1rem;
+	margin: 0;
 }
 .fizz p {
 	font-size: 0.7rem;
@@ -130,8 +132,28 @@ nav a:hover {
 /* Connect Section */
 
 .connect {
-	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	border: 2rem solid rgb(14, 14, 39);
+	background-color: rgb(11, 11, 32);
+	width: 100%;
 }
+
+.connect h1 {
+	color: whitesmoke;
+}
+
+.social media {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.twitter {
+	background-position-x: 4rem;
+}
+
 /* Footer */
 footer {
 	display: flex;
@@ -140,9 +162,14 @@ footer {
 }
 footer p {
 	font-size: 0.7rem;
+	color: whitesmoke;
 	border: 1px solid black;
 	align-content: center;
 }
-.large {
-	display: none;
+.screen {
+	visibility: hidden;
+}
+
+.icon-logo {
+	font-size: 2rem;
 }
