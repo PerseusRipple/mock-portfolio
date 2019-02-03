@@ -19,9 +19,26 @@ body {
 
 header {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	flex-wrap: wrap;
 }
+
+	.textbox h2 {
+		display: none;
+		font-size: 1rem;
+	}
+	
+	.title {
+		display: none;
+		font-size: 1rem;
+		text-align: center;
+	}
+	
+	.location {
+		display: none;
+	}
+
 
 .bio {
 	display: flex;
@@ -35,30 +52,62 @@ header {
 }
 
 .bio img {
-	margin: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 2rem 3rem;
 	border-radius: 5%;
 }
 
 .textbox {
 	display: flex;
 	justify-content: center;
-	flex-wrap: wrap;
-	border-radius: 10%;
-	margin: 0.5rem;
-	background-color: gray;
-	opacity: 0.9;
-	height: 8%;
-	width: 95%;
-	padding: 0.5rem;
-}
-
-.title {
 	text-align: center;
+	flex-direction: column;
+	border-radius: 10%;
+	margin: 2rem;
+	background-color: gray;
+	opacity: 0.7;
+	width: 75%;
+	height: 5%;
+	padding: 0.25rem;
 }
 
-.location {
-	display: none;
+.small {
+	font-size: 0.5rem;
+	margin: 1rem;
 }
+
+@media only screen and (max-width: 1024px){
+  
+	
+	@media only screen and (max-width: 640px) {
+		header {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+			.textbox h2 {
+				display: none;
+				font-size: 1rem;
+			}
+			
+			.title {
+				display: none;
+				font-size: 1rem;
+				text-align: center;
+			}
+			
+			.location {
+				display: none;
+			}
+
+		}
+ 
+	}
+
 
 /* Games */
 
@@ -82,8 +131,11 @@ ul.games li img:hover {
 
 .supporting-section {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	align-content: center;
 	flex-wrap: wrap;
+	width: 100%;
 }
 
 #react-holder {
@@ -94,21 +146,45 @@ ul.games li img:hover {
 }
 
 .react {
-	border: 2rem solid rgb(14, 14, 39);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	border: 6rem solid rgb(14, 14, 39);
+	border-bottom: 2rem;
 	background-color: whitesmoke;
+	margin-left: 1rem;
 	width: 100%;
 }
 
-.greek {
-	position: relative;
+.greek-react {
 	font-size: 0.77rem;
 	padding: 1rem;
 	text-align: left;
 }
 
 .button {
+	background-color: rgb(37, 109, 175);
+	border: 0;
+	border-radius: 10%;
+	color: whitesmoke;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	padding: 0.50rem;
+	margin-right: 0.85rem;
+	float: right;
+}
+
+.greek-fizz {
+	font-size: 0.77rem;
+	padding: 1rem;
+	text-align: left;
+	
+}
+
+/*.fizz.button {
 	position: absolute;
-	background-size: 60vw;
+	background-size: -75vw;
 	background-color: rgb(37, 109, 175);
 	border: 0;
 	border-radius: 10%;
@@ -116,7 +192,7 @@ ul.games li img:hover {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	padding: 0.5rem;
-	margin-right: 1rem;
+	margin-right: 0.75rem; */
 }
 
 #fizz-holder {
@@ -126,8 +202,14 @@ ul.games li img:hover {
 }
 
 .fizz {
-	border: 2rem solid rgb(14, 14, 39);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	border: 6rem solid rgb(14, 14, 39);
+	border-bottom: 1rem;
 	background-color: whitesmoke;
+	margin-left: 1rem;
 	width: 100%;
 }
 
@@ -139,14 +221,16 @@ ul.games li img:hover {
 
 .connect {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	flex-wrap: wrap;
-	border: 2rem solid rgb(14, 14, 39);
+	border: 3rem solid rgb(14, 14, 39);
 	background-color: rgb(11, 11, 32);
-	width: 100%;
+	width: 102%;
 }
 
 .connect h1 {
+	margin-right: 3rem;
+	margin-left: 3rem;
 	color: whitesmoke;
 }
 
@@ -156,9 +240,12 @@ ul.games li img:hover {
 	justify-content: center;
 	align-content: center;
 	list-style: none;
+	margin-right: 3rem;
 }
 
-.twitter {
+ul.social-media {
+	display: flex;
+	justify-content: space-around;
 }
 
 /* Footer */
@@ -167,16 +254,18 @@ footer {
 	justify-content: center;
 	flex-wrap: wrap;
 }
+
 footer p {
 	font-size: 0.7rem;
 	color: whitesmoke;
 	border: 1px solid black;
 	align-content: center;
 }
+
 .screen {
 	visibility: hidden;
 }
 
 .truncated-logo {
-	font-size: 2rem;
+	font-size: 2.5rem;
 }
