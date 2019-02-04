@@ -14,6 +14,10 @@ body {
 	min-height: 100%;
 	text-align: center;
 }
+.container {
+	max-width: 960px;
+	margin: auto;
+}
 
 /* Header */
 
@@ -24,25 +28,9 @@ header {
 	flex-wrap: wrap;
 }
 
-	.textbox h2 {
-		display: none;
-		font-size: 1rem;
-	}
-	
-	.title {
-		display: none;
-		font-size: 1rem;
-		text-align: center;
-	}
-	
-	.location {
-		display: none;
-	}
-
-
 .bio {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
 	flex-wrap: wrap;
 	background-image: url(/images/space.png);
 	background-size: 100% 100%;
@@ -53,9 +41,9 @@ header {
 
 .bio img {
 	display: flex;
-	flex-direction: column;
+	
 	justify-content: center;
-	margin: 2rem 3rem;
+	margin: 2rem 2rem;
 	border-radius: 5%;
 }
 
@@ -64,24 +52,72 @@ header {
 	justify-content: center;
 	text-align: center;
 	flex-direction: column;
-	border-radius: 10%;
+	/*	background-image: url(/images/tri.png); */
+	border-radius: 5%;
 	margin: 2rem;
 	background-color: gray;
 	opacity: 0.7;
-	width: 75%;
-	height: 5%;
+	width: 55%;
+	height: 90%;
 	padding: 0.25rem;
 }
 
-.small {
-	font-size: 0.5rem;
-	margin: 1rem;
+.full-title {
+	display: flex;
+	justify-content: left;
+	align-content: center;
+	flex-wrap: wrap;
+	text-align: left;
+	font-size: 1.25rem;
+	margin-left: 0.5rem;
 }
 
-@media only screen and (max-width: 1024px){
-  
-	
-	@media only screen and (max-width: 640px) {
+/*.textbox h2 {
+	display: flex;
+	justify-content: center;
+	font-size: 1rem;
+} */
+
+.truncated-title {
+	display: none;
+}
+
+@media only screen and (max-width: 640px) {
+	header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.textbox {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		flex-direction: column;
+		border-radius: 10%;
+		margin: 2rem;
+		background-color: gray;
+		opacity: 0.7;
+		width: 75%;
+		padding: 0.25rem;
+	}
+
+	.full-title {
+		display: none;
+	}
+
+	/*.textbox h2 {
+			display: none;
+		} */
+
+	.truncated-title {
+		display: flex;
+		justify-content: center;
+		font-weight: bold;
+	}
+
+	@media only screen and (max-width: 1024px) {
 		header {
 			display: flex;
 			flex-direction: column;
@@ -89,60 +125,68 @@ header {
 			flex-wrap: wrap;
 		}
 
-			.textbox h2 {
-				display: none;
-				font-size: 1rem;
-			}
-			
-			.title {
-				display: none;
-				font-size: 1rem;
-				text-align: center;
-			}
-			
-			.location {
-				display: none;
-			}
-
-		}
- 
 	}
 
+	/* Games */
 
-/* Games */
+	.games {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		list-style: none;
+		text-decoration: none;
+		background-color: rgba(18, 18, 31, 0.75);
+		margin: 1rem;
+		padding: 0.77rem;
+	}
 
-ul.games {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	list-style: none;
-	background-color: rgba(18, 18, 31, 0.75);
-	margin: 1rem;
-	padding: 0.77rem;
-}
+	.games ul {
+		list-style: none;
+		text-decoration: none;
+	}
 
-ul.games li img:hover {
-	backface-visibility: hidden;
-	animation: left;
+	ul.games li {
+		list-style: none;
+
+	}
+
+	.game img {
+		
+	}
+
+		@media only screen and (max-width: 640px) {
+		.games {
+			display: flex;
+		  flex-direction: column;
+		  justify-content: space-between;
+		  align-content: center;
+		  list-style: none;
+		  background-color: rgba(18, 18, 31, 0.75);
+		  margin: 1rem;
+		  padding: 0.77rem;
+		}
+
+
+
+    /*display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+		list-style: none;
+		background-color: rgba(18, 18, 31, 0.75);
+		margin: 1rem;
+		padding: 0.77rem;*/
 }
 
 /* Supporting Section */
 
-.supporting-section {
+/*.supporting-section {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
 	flex-wrap: wrap;
 	width: 100%;
-}
-
-#react-holder {
-	background-image: url('/images/react.png');
-	background-size: 100%;
-	background-position-y: 50%;
-	height: 3rem;
 }
 
 .react {
@@ -155,6 +199,17 @@ ul.games li img:hover {
 	background-color: whitesmoke;
 	margin-left: 1rem;
 	width: 100%;
+}
+
+#react-holder {
+	background-image: url('/images/react.png');
+	background-size: 100%;
+	background-position-y: 50%;
+	height: 3rem;
+}
+
+.date {
+	font-size: 0.7rem;
 }
 
 .greek-react {
@@ -175,12 +230,9 @@ ul.games li img:hover {
 	float: right;
 }
 
-.greek-fizz {
-	font-size: 0.77rem;
-	padding: 1rem;
-	text-align: left;
-	
-}
+/*.button:hover {
+	background-color: green;
+}*/
 
 /*.fizz.button {
 	position: absolute;
@@ -193,28 +245,106 @@ ul.games li img:hover {
 	font-weight: 400;
 	padding: 0.5rem;
 	margin-right: 0.75rem; */
-}
 
-#fizz-holder {
-	background-image: url('/images/code.png');
-	background-size: 100%;
-	height: 3rem;
-}
-
-.fizz {
+/*.fizz {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
 	border: 6rem solid rgb(14, 14, 39);
-	border-bottom: 1rem;
+	border-bottom: 2rem;
 	background-color: whitesmoke;
 	margin-left: 1rem;
 	width: 100%;
 }
 
-.date {
-	font-size: 0.7rem;
+#fizz-holder {
+	background-image: url('/images/code.png');
+	background-size: 100%;
+	background-position-y: 50%;
+	height: 3rem;
+}
+
+.greek-fizz {
+	font-size: 0.77rem;
+	padding: 1rem;
+	text-align: left; */
+
+
+
+@media only screen and (max-width: 640px) {
+	/*.supporting-section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		flex-wrap: wrap;
+		width: 100%;
+	}*/
+
+	.react {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		border: 5rem solid rgb(14, 14, 39);
+		border-bottom: 2rem;
+		background-color: whitesmoke;
+		width: 100%;
+	}
+	
+	#react-holder {
+		background-image: url('/images/react.png');
+		background-size: 100%;
+		background-position-y: 50%;
+		height: 3rem;
+	}
+	
+	.date {
+		font-size: 0.7rem;
+	}
+	
+	.greek-react {
+		font-size: 0.77rem;
+		padding: 1rem;
+		text-align: left;
+	}
+	
+	.button {
+		background-color: rgb(37, 109, 175);
+		border: 0;
+		border-radius: 10%;
+		color: whitesmoke;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
+		padding: 0.50rem;
+		float: right;
+	}
+	.fizz {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		border: 5rem solid rgb(14, 14, 39);
+		border-bottom: 2rem;
+		background-color: whitesmoke;
+	
+		width: 100%;
+	}
+	
+	#fizz-holder {
+		background-image: url('/images/code.png');
+		background-size: 100%;
+		background-position-y: 50%;
+		height: 3rem;
+	}
+	
+	.greek-fizz {
+		font-size: 0.77rem;
+		padding: 1rem;
+		text-align: left;
+	}
+	
 }
 
 /* Connect Section */
@@ -223,9 +353,9 @@ ul.games li img:hover {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	border: 3rem solid rgb(14, 14, 39);
+	border: 5.5rem solid rgb(14, 14, 39);
 	background-color: rgb(11, 11, 32);
-	width: 102%;
+	width: 150%;
 }
 
 .connect h1 {
@@ -236,17 +366,55 @@ ul.games li img:hover {
 
 .social-media {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	align-content: center;
 	list-style: none;
 	margin-right: 3rem;
+	padding-top: 0.75rem;
 }
 
 ul.social-media {
 	display: flex;
 	justify-content: space-around;
+	align-content: center;
+
 }
+
+@media only screen and (max-width: 640px) {
+	.connect {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.connect h1 {
+		display: inline;
+		margin: auto;
+	}
+
+
+.social-media {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	list-style: none;
+	padding-top: 0.75rem;
+	width: 100%;
+}
+
+ul.social-media {
+	display: flex;
+	justify-content: space-around;
+	}
+
+}
+
+
+
 
 /* Footer */
 footer {
@@ -255,17 +423,34 @@ footer {
 	flex-wrap: wrap;
 }
 
-footer p {
+.screen {
+	justify-content: center;
 	font-size: 0.7rem;
 	color: whitesmoke;
-	border: 1px solid black;
 	align-content: center;
-}
 
-.screen {
-	visibility: hidden;
 }
 
 .truncated-logo {
-	font-size: 2.5rem;
+	display: none;	
+}
+
+@media only screen and (max-width: 640px) {
+	footer {
+		display: flex;
+		justify-content: center;
+		
+	}
+
+	.screen {
+		visibility: hidden;
+	}
+
+	.truncated-logo {
+		display: flex;
+		justify-content: center;
+		color: whitesmoke;
+		font-size: 2.5rem;
+	}
+
 }
